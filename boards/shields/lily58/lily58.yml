@@ -1,9 +1,0 @@
-file_format: "1"
-id: lily58
-name: lily58
-type: shield
-url: https://github.com/ces4119/zmk-config-lily58
-requires:
-  - i2c_oled
-features:
-  - display
