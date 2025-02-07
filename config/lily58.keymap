@@ -7,9 +7,19 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 / {
+    macros {
+        hold_m1: auto_click {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mkp MB1>;
+            label = "AUTO_CLICK";
+            tap-ms = <0>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -22,11 +32,11 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&kp ESC    &kp N1  &kp N2  &kp N3  &kp N4    &kp N5                                    &kp N6         &kp N7       &kp N8     &kp N9   &kp N0    &kp GRAVE
-&kp TAB    &kp Q   &kp W   &kp E   &kp R     &kp T                                     &kp Y          &kp U        &kp I      &kp O    &kp P     &kp MINUS
-&kt LCTRL  &kp A   &kp S   &kp D   &kp F     &kp G                                     &kp H          &kp J        &kp K      &kp L    &kp SEMI  &kp SQT
-&kt LSHFT  &kp Z   &kp X   &kp C   &kp V     &kp B     &kp LBKT     &kp RBKT           &kp N          &kp M        &kp COMMA  &kp DOT  &kp FSLH  &kt RSHFT
-                           &to 1   &kp LGUI  &kt LALT  &kp SPACE    &mt DEL BACKSPACE  &kt BACKSPACE  &kp RA(TAB)  &to 2
+&kp ESC    &kp N1  &kp N2  &kp N3  &kp N4    &kp N5                            &kp N6             &kp N7       &kp N8     &kp N9   &kp N0    &kp GRAVE
+&kp TAB    &kp Q   &kp W   &kp E   &kp R     &kp T                             &kp Y              &kp U        &kp I      &kp O    &kp P     &kp MINUS
+&sk LCTRL  &kp A   &kp S   &kp D   &kp F     &kp G                             &kp H              &kp J        &kp K      &kp L    &kp SEMI  &kp SQT
+&sk LSHFT  &kp Z   &kp X   &kp C   &kp V     &kp B     &kp LBKT     &kp RBKT   &kp N              &kp M        &kp COMMA  &kp DOT  &kp FSLH  &sk RSHFT
+                           &to 1   &kp LGUI  &sk LALT  &kp SPACE    &kp ENTER  &mt DEL BACKSPACE  &kp RA(TAB)  &to 2
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -43,9 +53,9 @@
             bindings = <
 &to 0       &bt BT_NXT  &trans    &trans       &trans            &trans                                                    &trans  &trans  &trans  &trans  &trans         &kp C_VOLUME_UP
 &trans      &kp LS(F5)  &kp F5    &kp LA(F1)   &kp LS(LC(F5))    &kp F9                                                    &trans  &kp N7  &kp N8  &kp N9  &trans         &kp C_VOLUME_DOWN
-&kt LCTRL   &kp LEFT    &kp DOWN  &kp UP       &kp RIGHT         &trans                                                    &trans  &kp N4  &kp N5  &kp N6  &trans         &trans
-&kt LSHIFT  &kp F10     &kp F11   &kp LS(F11)  &kp LS(LC(LEFT))  &kp LS(LC(RIGHT))  &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &trans  &kp N1  &kp N2  &kp N3  &kp BACKSLASH  &kt RSHIFT
-                                  &to 2        &trans            &kt LALT           &kt LCTRL           &kt LC(LSHIFT)     &kp N0  &trans  &to 0
+&sk LCTRL   &kp LEFT    &kp DOWN  &kp UP       &kp RIGHT         &trans                                                    &trans  &kp N4  &kp N5  &kp N6  &trans         &trans
+&sk LSHIFT  &kp F10     &kp F11   &kp LS(F11)  &kp LS(LC(LEFT))  &kp LS(LC(RIGHT))  &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &trans  &kp N1  &kp N2  &kp N3  &kp BACKSLASH  &sk RSHIFT
+                                  &to 2        &trans            &sk LALT           &trans              &sk LC(LSHIFT)     &kp N0  &trans  &to 0
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -53,11 +63,11 @@
 
         macros {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&to 0   &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
+                        &to 0   &trans  &trans  &trans    &trans  &trans  &trans  &to 1
             >;
         };
     };
