@@ -11,20 +11,12 @@
 
 / {
     macros {
-        hold_m1: auto_click {
+        m1: m1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&mkp MB1>,
-                <&macro_wait_time 50>,
-                <&mkp MB1>,
-                <&macro_wait_time 50>,
-                <&hold_m1>;
+            bindings = <&mkp MB1>, <&macro_wait_time 20>, <&m1>;
 
-            // Repeat the sequence while held
-
-            label = "AUTO_CLICK";
-            tap-ms = <0>;
+            label = "m1";
         };
     };
 
@@ -44,7 +36,7 @@
 &kp TAB    &kp Q   &kp W   &kp E   &kp R     &kp T                                                              &kp Y              &kp U        &kp I      &kp O    &kp P     &kp MINUS
 &sk LCTRL  &kp A   &kp S   &kp D   &kp F     &kp G                                                              &kp H              &kp J        &kp K      &kp L    &kp SEMI  &kp SQT
 &sk LSHFT  &kp Z   &kp X   &kp C   &kp V     &kp B     &mt LBKT LEFT_PARENTHESIS    &mt RBKT RIGHT_PARENTHESIS  &kp N              &kp M        &kp COMMA  &kp DOT  &kp FSLH  &sk RSHFT
-                           &to 1   &kp LGUI  &sk LALT  &kp SPACE                    &kp ENTER                   &mt DEL BACKSPACE  &kp RA(TAB)  &tog 3
+                           &to 1   &kp LGUI  &sk LALT  &kp SPACE                    &lt 3 ENTER                 &mt DEL BACKSPACE  &kp RA(TAB)  &to 2
             >;
         };
 
@@ -54,7 +46,7 @@
 &trans   &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans           &trans            &trans
 &trans   &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans           &mt SEMICOLON UP  &trans
 &trans   &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &mt PERIOD LEFT  &mt SLASH DOWN    &kp RIGHT
-                         &to 2   &trans  &trans  &trans    &trans  &trans  &trans  &tog 3
+                         &to 2   &trans  &trans  &trans    &trans  &trans  &trans  &to 0
             >;
         };
 
@@ -71,17 +63,17 @@
 &trans      &kp LS(F5)  &kp F5        &kp LA(F1)             &kp LS(LC(F5))  &kp F9                                                &trans  &kp N7  &kp N8  &kp N9  &kp EQUAL      &kp C_VOLUME_DOWN
 &sk LCTRL   &kp LEFT    &kp DOWN      &kp UP                 &kp RIGHT       &trans                                                &kp N0  &kp N4  &kp N5  &kp N6  &trans         &trans
 &sk LSHIFT  &kp F10     &kp F11       &kp LS(F11)            &kp LC(LEFT)    &kp LC(RIGHT)  &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &trans  &kp N1  &kp N2  &kp N3  &kp BACKSLASH  &sk RSHIFT
-                                      &to 0                  &trans          &sk LALT       &trans              &trans             &trans  &trans  &tog 3
+                                      &to 0                  &trans          &sk LALT       &trans              &trans             &trans  &trans  &to 1
             >;
         };
 
         Macros {
             bindings = <
-&to 0   &hold_m1  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans    &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans    &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans    &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                          &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
+&sys_reset  &m1     &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                            &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
             >;
         };
     };
