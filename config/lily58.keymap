@@ -14,7 +14,12 @@
         hold_m1: auto_click {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mkp MB1>;
+            bindings
+                = <&macro_press &mb1>  // Press the left mouse button
+                , <&macro_wait_time 50> // Wait 50ms (adjust for click speed)
+                , <&macro_release &mb1> // Release the left mouse button
+                , <&macro_wait_time 50> // Wait 50ms before repeating
+                , <&macro_repeat>;      // Repeat the sequence while held
             label = "AUTO_CLICK";
             tap-ms = <0>;
         };
