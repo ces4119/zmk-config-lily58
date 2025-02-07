@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 / {
     macros {
@@ -14,14 +15,14 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press>,
-                <&mb1>,
+                <&mkp MB1>,
                 <&macro_wait_time 50>,
-                <&macro_release>,
-                <&mb1>,
+                <&mkp MB1>,
                 <&macro_wait_time 50>,
-                <&macro_repeat>;
-      // Repeat the sequence while held
+                <&hold_m1>;
+
+            // Repeat the sequence while held
+
             label = "AUTO_CLICK";
             tap-ms = <0>;
         };
