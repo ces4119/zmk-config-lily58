@@ -23,7 +23,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        home {
+        Home {
             // ------------------------------------------------------------------------------------------------------------
             // |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   `   |
             // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   -   |
@@ -32,17 +32,25 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&kp ESC    &kp N1  &kp N2  &kp N3  &kp N4    &kp N5                            &kp N6             &kp N7       &kp N8     &kp N9   &kp N0    &kp GRAVE
-&kp TAB    &kp Q   &kp W   &kp E   &kp R     &kp T                             &kp Y              &kp U        &kp I      &kp O    &kp P     &kp MINUS
-&sk LCTRL  &kp A   &kp S   &kp D   &kp F     &kp G                             &kp H              &kp J        &kp K      &kp L    &kp SEMI  &kp SQT
-&sk LSHFT  &kp Z   &kp X   &kp C   &kp V     &kp B     &kp LBKT     &kp RBKT   &kp N              &kp M        &kp COMMA  &kp DOT  &kp FSLH  &sk RSHFT
-                           &to 1   &kp LGUI  &sk LALT  &kp SPACE    &kp ENTER  &mt DEL BACKSPACE  &kp RA(TAB)  &to 2
+&kp ESC    &kp N1  &kp N2  &kp N3  &kp N4    &kp N5                                                             &kp N6             &kp N7       &kp N8     &kp N9   &kp N0    &mt GRAVE EQUAL
+&kp TAB    &kp Q   &kp W   &kp E   &kp R     &kp T                                                              &kp Y              &kp U        &kp I      &kp O    &kp P     &kp MINUS
+&sk LCTRL  &kp A   &kp S   &kp D   &kp F     &kp G                                                              &kp H              &kp J        &kp K      &kp L    &kp SEMI  &kp SQT
+&sk LSHFT  &kp Z   &kp X   &kp C   &kp V     &kp B     &mt LBKT LEFT_PARENTHESIS    &mt RBKT RIGHT_PARENTHESIS  &kp N              &kp M        &kp COMMA  &kp DOT  &kp FSLH  &sk RSHFT
+                           &to 1   &kp LGUI  &sk LALT  &kp SPACE                    &kp ENTER                   &mt DEL BACKSPACE  &kp RA(TAB)  &to 3
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        selection {
+        Directional {
+            bindings = <
+&kp ESC  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans          &trans            &trans
+&trans   &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans          &trans            &trans
+&trans   &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans          &mt SEMICOLON UP  &trans
+&trans   &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &mt COMMA LEFT  &mt PERIOD DOWN   &kp RIGHT
+                         &to 2   &trans  &trans  &trans    &trans  &trans  &trans  &to 0
+            >;
+        };
+
+        Selection {
             // ------------------------------------------------------------------------------------------------------------
             // | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |       |
             // |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  F8   |  F9   |  F10 |  F11  |  F12  |
@@ -51,23 +59,21 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&to 0       &bt BT_NXT  &trans    &trans       &trans            &trans                                                    &trans  &trans  &trans  &trans  &trans         &kp C_VOLUME_UP
-&trans      &kp LS(F5)  &kp F5    &kp LA(F1)   &kp LS(LC(F5))    &kp F9                                                    &trans  &kp N7  &kp N8  &kp N9  &trans         &kp C_VOLUME_DOWN
-&sk LCTRL   &kp LEFT    &kp DOWN  &kp UP       &kp RIGHT         &trans                                                    &trans  &kp N4  &kp N5  &kp N6  &trans         &trans
-&sk LSHIFT  &kp F10     &kp F11   &kp LS(F11)  &kp LS(LC(LEFT))  &kp LS(LC(RIGHT))  &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &trans  &kp N1  &kp N2  &kp N3  &kp BACKSLASH  &sk RSHIFT
-                                  &to 2        &trans            &sk LALT           &trans              &sk LC(LSHIFT)     &kp N0  &trans  &to 0
+&to 0       &bt BT_NXT  &trans    &trans       &trans          &trans                                                &trans  &trans  &trans  &trans  &trans         &kp C_VOLUME_UP
+&trans      &kp LS(F5)  &kp F5    &kp LA(F1)   &kp LS(LC(F5))  &kp F9                                                &trans  &kp N7  &kp N8  &kp N9  &kp EQUAL      &kp C_VOLUME_DOWN
+&sk LCTRL   &kp LEFT    &kp DOWN  &kp UP       &kp RIGHT       &trans                                                &kp N0  &kp N4  &kp N5  &kp N6  &trans         &trans
+&sk LSHIFT  &kp F10     &kp F11   &kp LS(F11)  &kp LC(LEFT)    &kp LC(RIGHT)  &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &trans  &kp N1  &kp N2  &kp N3  &kp BACKSLASH  &sk RSHIFT
+                                  &to 3        &trans          &sk LALT       &trans              &trans             &trans  &trans  &to 1
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        macros {
+        Macros {
             bindings = <
-&to 0   &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &to 0   &trans  &trans  &trans    &trans  &trans  &trans  &to 1
+&to 0   &hold_m1  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans    &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans    &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans    &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                          &to 0   &trans  &trans  &trans    &trans  &trans  &trans  &to 2
             >;
         };
     };
