@@ -36,7 +36,7 @@
 &kp TAB    &kp Q   &kp W   &kp E   &kp R     &kp T                                                              &kp Y          &kp U        &kp I      &kp O    &kp P      &kp MINUS
 &sk LCTRL  &kp A   &kp S   &kp D   &kp F     &kp G                                                              &kp H          &kp J        &kp K      &kp L    &kp SEMI   &kp SQT
 &sk LSHFT  &kp Z   &kp X   &kp C   &kp V     &kp B     &mt LEFT_PARENTHESIS LBKT    &mt RIGHT_PARENTHESIS RBKT  &kp N          &kp M        &kp COMMA  &kp DOT  &kp SLASH  &sk RSHFT
-                           &to 2   &kp LGUI  &sk LALT  &lt 4 SPACE                  &lt 3 ENTER                 &kp BACKSPACE  &kp RA(TAB)  &to 4
+                           &to 1   &kp LGUI  &sk LALT  &lt 4 SPACE                  &lt 3 ENTER                 &kp BACKSPACE  &kp RA(TAB)  &to 2
             >;
         };
 
@@ -46,7 +46,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans           &trans            &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans           &mt SEMICOLON UP  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &mt PERIOD LEFT  &mt SLASH DOWN    &kp RIGHT
-                        &to 4   &trans  &trans  &trans    &trans  &trans  &trans  &to 0
+                        &to 2   &trans  &trans  &trans    &trans  &trans  &trans  &to 0
             >;
         };
 
@@ -63,7 +63,7 @@
 &trans  &kp LS(F5)  &kp F5   &kp LA(F1)   &kp LS(LC(F5))  &kp F9                    &trans  &trans  &trans  &trans      &trans     &trans
 &trans  &kp F10     &kp F11  &kp LS(F11)  &trans          &trans                    &trans  &trans  &trans  &trans      &kp SEMI   &trans
 &trans  &trans      &trans   &trans       &trans          &trans  &trans    &trans  &trans  &trans  &trans  &kp PERIOD  &kp SLASH  &sk RSHIFT
-                             &to 0        &trans          &trans  &trans    &trans  &trans  &trans  &to 2
+                             &to 0        &trans          &trans  &trans    &trans  &trans  &trans  &to 1
             >;
         };
 
