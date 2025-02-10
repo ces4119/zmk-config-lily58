@@ -82,7 +82,7 @@
 &sys_reset  &m1               &trans        &trans             &trans          &trans                            &trans             &trans            &trans    &trans             &trans         &kp EQUAL
 &trans      &kp LC(LG(LEFT))  &kp LG(UP)    &kp LC(LG(RIGHT))  &kp LC(LG(D))   &trans                            &kp C_VOLUME_UP    &kp LS(LC(LEFT))  &kp UP    &kp LS(LC(RIGHT))  &kp PAGE_UP    &trans
 &trans      &kp LG(LEFT)      &kp LG(DOWN)  &kp LG(RIGHT)      &kp LC(LG(F4))  &trans                            &kp C_VOLUME_DOWN  &kp LEFT          &kp DOWN  &kp RIGHT          &kp PAGE_DOWN  &trans
-&trans      &kp LA(LC(HOME))  &trans        &kp LA(LC(END))    &trans          &trans  &bt BT_PRV    &bt BT_NXT  &kp LS(LC(M))      &kp LC(LEFT)      &trans    &kp LC(RIGHT)      &kp BACKSLASH  &trans
+&kp CAPS    &kp LC(LA(HOME))  &trans        &kp LC(LA(END))    &trans          &trans  &bt BT_PRV    &bt BT_NXT  &kp LS(LC(M))      &kp LC(LEFT)      &trans    &kp LC(RIGHT)      &kp BACKSLASH  &trans
                                             &trans             &trans          &trans  &trans        &to 0       &kp DEL            &trans            &trans
             >;
         };
