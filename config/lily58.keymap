@@ -36,7 +36,7 @@
 &kp TAB    &kp Q   &kp W   &kp E   &kp R     &kp T                                                              &kp Y          &kp U        &kp I      &kp O         &kp P           &kp MINUS
 &kp LCTRL  &kp A   &kp S   &kp D   &kp F     &kp G                                                              &kp H          &kp J        &kp K      &kp L         &mt SEMI UP     &kp SQT
 &kp LSHFT  &kp Z   &kp X   &kp C   &kp V     &kp B     &mt LEFT_PARENTHESIS LBKT    &mt RIGHT_PARENTHESIS RBKT  &kp N          &kp M        &kp COMMA  &mt DOT LEFT  &mt SLASH DOWN  &mt RSHFT RIGHT
-                           &to 1   &kp LGUI  &sk LALT  &lt 4 SPACE                  &lt 3 ENTER                 &kp BACKSPACE  &kp RA(TAB)  &to 2
+                           &to 1   &kp LGUI  &sk LALT  &lt 5 SPACE                  &kp ENTER                   &kp BACKSPACE  &kp RA(TAB)  &to 2
             >;
         };
 
@@ -46,7 +46,7 @@
 &kp TAB    &kp Q   &kp W   &kp E   &kp R     &kp T                                                              &kp Y          &kp U        &kp I      &kp O    &kp P      &kp MINUS
 &sk LCTRL  &kp A   &kp S   &kp D   &kp F     &kp G                                                              &kp H          &kp J        &kp K      &kp L    &kp SEMI   &kp SQT
 &sk LSHFT  &kp Z   &kp X   &kp C   &kp V     &kp B     &mt LEFT_PARENTHESIS LBKT    &mt RIGHT_PARENTHESIS RBKT  &kp N          &kp M        &kp COMMA  &kp DOT  &kp SLASH  &sk RSHFT
-                           &to 2   &kp LGUI  &sk LALT  &lt 4 SPACE                  &lt 3 ENTER                 &kp BACKSPACE  &kp RA(TAB)  &to 0
+                           &to 2   &kp LGUI  &sk LALT  &lt 5 SPACE                  &kp ENTER                   &kp BACKSPACE  &kp RA(TAB)  &to 0
             >;
         };
 
@@ -63,7 +63,7 @@
 &trans  &kp LS(F5)  &kp F5   &kp LA(F1)   &kp LS(LC(F5))  &kp F9                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp F10     &kp F11  &kp LS(F11)  &trans          &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans      &trans   &trans       &trans          &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                             &to 0        &trans          &trans  &trans    &trans  &trans  &trans  &to 1
+                             &trans       &trans          &trans  &trans    &to 1   &trans  &trans  &trans
             >;
         };
 
@@ -73,17 +73,27 @@
 &trans  &kp HOME  &kp UP    &kp END    &kp LC(LA(HOME))  &trans                                                 &trans  &kp N7  &kp N8  &kp N9  &trans         &trans
 &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &kp LC(LA(END))   &trans                                                 &kp N0  &kp N4  &kp N5  &kp N6  &trans         &trans
 &trans  &trans    &trans    &trans     &trans            &trans  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &trans  &kp N1  &kp N2  &kp N3  &kp BACKSLASH  &trans
-                            &to 3      &trans            &trans  &to 1                   &trans                 &trans  &trans  &trans
+                            &trans     &trans            &trans  &trans                  &to 1                  &trans  &trans  &trans
             >;
         };
 
         Macros {
             bindings = <
-&sys_reset  &m1               &trans        &trans             &trans          &trans                            &trans             &trans            &trans    &trans             &trans         &kp EQUAL
-&trans      &kp LC(LG(LEFT))  &kp LG(UP)    &kp LC(LG(RIGHT))  &kp LC(LG(D))   &trans                            &kp C_VOLUME_UP    &kp LS(LC(LEFT))  &kp UP    &kp LS(LC(RIGHT))  &kp PAGE_UP    &trans
-&trans      &kp LG(LEFT)      &kp LG(DOWN)  &kp LG(RIGHT)      &kp LC(LG(F4))  &trans                            &kp C_VOLUME_DOWN  &kp LEFT          &kp DOWN  &kp RIGHT          &kp PAGE_DOWN  &trans
-&trans      &trans            &trans        &kp LS(LA(DOWN))   &kp LS(LA(UP))  &trans  &bt BT_PRV    &bt BT_NXT  &kp LS(LC(M))      &kp LC(LEFT)      &trans    &kp LC(RIGHT)      &kp BACKSLASH  &kp CAPS
-                                            &trans             &trans          &trans  &trans        &to 1       &kp DEL            &trans            &to 4
+&sys_reset  &m1               &trans        &trans             &trans          &trans                    &trans             &trans            &trans    &trans             &trans         &kp EQUAL
+&trans      &kp LC(LG(LEFT))  &kp LG(UP)    &kp LC(LG(RIGHT))  &kp LC(LG(D))   &trans                    &kp C_VOLUME_UP    &kp LS(LC(LEFT))  &kp UP    &kp LS(LC(RIGHT))  &kp PAGE_UP    &trans
+&trans      &kp LG(LEFT)      &kp LG(DOWN)  &kp LG(RIGHT)      &kp LC(LG(F4))  &trans                    &kp C_VOLUME_DOWN  &kp LEFT          &kp DOWN  &kp RIGHT          &kp PAGE_DOWN  &trans
+&trans      &trans            &trans        &kp LS(LA(DOWN))   &kp LS(LA(UP))  &trans  &trans    &trans  &kp LS(LC(M))      &kp LC(LEFT)      &trans    &kp LC(RIGHT)      &kp BACKSLASH  &kp CAPS
+                                            &trans             &trans          &trans  &trans    &trans  &kp DEL            &trans            &trans
+            >;
+        };
+
+        Layers {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                            &trans  &to 2   &to 3   &to 4   &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &bt BT_PRV    &bt BT_NXT  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  &trans        &trans      &trans  &trans  &trans
             >;
         };
     };
