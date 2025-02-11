@@ -36,7 +36,7 @@
 &kp TAB    &kp Q   &kp W   &kp E   &kp R     &kp T                                                              &kp Y          &kp U        &kp I      &kp O         &kp P           &kp MINUS
 &kp LCTRL  &kp A   &kp S   &kp D   &kp F     &kp G                                                              &kp H          &kp J        &kp K      &kp L         &mt SEMI UP     &kp SQT
 &kp LSHFT  &kp Z   &kp X   &kp C   &kp V     &kp B     &mt LEFT_PARENTHESIS LBKT    &mt RIGHT_PARENTHESIS RBKT  &kp N          &kp M        &kp COMMA  &mt DOT LEFT  &mt SLASH DOWN  &mt RSHFT RIGHT
-                           &to 1   &kp LGUI  &kp LALT  &lt 5 SPACE                  &kp ENTER                   &kp BACKSPACE  &kp RA(TAB)  &to 0
+                           &to 1   &kp LGUI  &kp LALT  &kp SPACE                    &kp ENTER                   &kp BACKSPACE  &kp RA(TAB)  &to 0
             >;
         };
 
@@ -59,11 +59,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&kp ESC     &none       &none    &none        &none           &none                         &none              &none        &none  &none  &none  &none
-&kp F4      &kp LS(F5)  &kp F5   &kp LA(F1)   &kp LS(LC(F5))  &kp F9                        &none              &none        &none  &none  &none  &none
-&kp LCTRL   &kp F10     &kp F11  &kp LS(F11)  &none           &none                         &none              &none        &none  &none  &none  &none
-&kp LSHIFT  &none       &none    &none        &none           &none     &none        &none  &none              &none        &none  &none  &none  &kp RSHFT
-                                 &to 3        &none           &kp LALT  &kp SPACE    &to 1  &mt DEL BACKSPACE  &kp RA(TAB)  &to 0
+&kp ESC     &none       &none    &none        &none           &none                           &none              &none        &none  &none  &none  &none
+&kp F4      &kp LS(F5)  &kp F5   &kp LA(F1)   &kp LS(LC(F5))  &kp F9                          &none              &none        &none  &none  &none  &none
+&kp LCTRL   &kp F10     &kp F11  &kp LS(F11)  &none           &none                           &none              &none        &none  &none  &none  &none
+&kp LSHIFT  &none       &none    &none        &none           &none     &none          &none  &none              &none        &none  &none  &none  &kp RSHFT
+                                 &to 3        &none           &kp LALT  &lt 5 SPACE    &to 1  &mt DEL BACKSPACE  &kp RA(TAB)  &to 0
             >;
         };
 
@@ -73,17 +73,17 @@
 &none       &kp HOME  &kp UP    &kp END    &kp LS(LA(UP))    &none                                                    &none              &kp N7       &kp N8  &kp N9  &none          &none
 &sk LCTRL   &kp LEFT  &kp DOWN  &kp RIGHT  &kp LS(LA(DOWN))  &none                                                    &kp N0             &kp N4       &kp N5  &kp N6  &none          &none
 &sk LSHIFT  &none     &none     &none      &none             &none     &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &none              &kp N1       &kp N2  &kp N3  &kp BACKSLASH  &sk RSHIFT
-                                &to 4      &none             &sk RALT  &kp SPACE               &to 1                  &mt DEL BACKSPACE  &kp RA(TAB)  &to 0
+                                &to 4      &none             &sk RALT  &lt 5 SPACE             &to 1                  &mt DEL BACKSPACE  &kp RA(TAB)  &to 0
             >;
         };
 
         Macros {
             bindings = <
-&kp ESC     &none             &none         &none              &none           &none                         &none    &none         &none     &none          &none  &none
-&none       &kp LC(LG(LEFT))  &kp LG(UP)    &kp LC(LG(RIGHT))  &kp LC(LG(D))   &none                         &none    &kp LC(LEFT)  &kp UP    &kp LC(RIGHT)  &none  &none
-&sk LCTRL   &kp LG(LEFT)      &kp LG(DOWN)  &kp LG(RIGHT)      &kp LC(LG(F4))  &none                         &none    &kp LEFT      &kp DOWN  &kp RIGHT      &none  &none
-&sk LSHIFT  &none             &none         &kp LS(LA(DOWN))   &kp LS(LA(UP))  &none     &none        &none  &none    &kp LA(LEFT)  &none     &kp LA(RIGHT)  &none  &sk RSHIFT
-                                            &to 1              &none           &sk LALT  &kp SPACE    &to 1  &kp DEL  &kp RA(TAB)   &to 0
+&kp ESC     &none             &none         &none              &none           &none                           &none    &none         &none     &none          &none  &none
+&none       &kp LC(LG(LEFT))  &kp LG(UP)    &kp LC(LG(RIGHT))  &kp LC(LG(D))   &none                           &none    &kp LC(LEFT)  &kp UP    &kp LC(RIGHT)  &none  &none
+&sk LCTRL   &kp LG(LEFT)      &kp LG(DOWN)  &kp LG(RIGHT)      &kp LC(LG(F4))  &none                           &none    &kp LEFT      &kp DOWN  &kp RIGHT      &none  &none
+&sk LSHIFT  &none             &none         &kp LS(LA(DOWN))   &kp LS(LA(UP))  &none     &none          &none  &none    &kp LA(LEFT)  &none     &kp LA(RIGHT)  &none  &sk RSHIFT
+                                            &to 1              &none           &sk LALT  &lt 5 SPACE    &to 1  &kp DEL  &kp RA(TAB)   &to 0
             >;
         };
 
