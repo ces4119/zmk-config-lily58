@@ -52,7 +52,7 @@
 
         Numbers {
             bindings = <
-&kp ESC     &none         &none     &none          &none             &none                                                                                        &none              &none            &none   &none   &none                &kp EQUAL
+&kp ESC     &none         &none     &none          &none             &none                                                                                        &bt BT_CLR         &none            &none   &none   &none                &kp EQUAL
 &kp TAB     &kp LC(LEFT)  &kp UP    &kp LC(RIGHT)  &kp LC(LS(LEFT))  &kp LC(LS(RIGHT))                                                                            &none              &kp N7           &kp N8  &kp N9  &none                &kp MINUS
 &sk LCTRL   &kp LEFT      &kp DOWN  &kp RIGHT      &kp LS(HOME)      &kp LS(END)                                                                                  &none              &kp N4           &kp N5  &kp N6  &kp SEMI             &kp SQT
 &sk LSHIFT  &kp HOME      &none     &kp END        &none             &none              &mt LEFT_PARENTHESIS LEFT_BRACKET    &mt RIGHT_PARENTHESIS RIGHT_BRACKET  &none              &kp N1           &kp N2  &kp N3  &mt BACKSLASH SLASH  &sk RSHIFT
@@ -63,8 +63,8 @@
         Layers {
             bindings = <
 &kp ESC    &kp F1       &kp F2     &kp F3      &kp F4                  &sys_reset                                         &kp F6             &kp F7        &kp F8    &kp F12        &none             &kp EQUAL
-&kp CAPS   &kp LS(F5)   &kp F5     &kp LA(F1)  &kp LC(LS(F5))          &kp F9                                             &kp C_VOLUME_UP    &kp LC(LEFT)  &kp UP    &kp LC(RIGHT)  &kp LS(LA(UP))    &kp PG_UP
-&sk LCTRL  &kp LS(F11)  &kp F11    &kp F10     &kp LG(LC(D))           &kp LG(LC(F4))                                     &kp C_VOLUME_DOWN  &kp LEFT      &kp DOWN  &kp RIGHT      &kp LS(LA(DOWN))  &kp PG_DN
+&kp CAPS   &kp LS(F5)   &kp F5     &kp LA(F1)  &kp LC(LS(F5))          &kp F9                                             &kp C_VOLUME_UP    &kp LC(LEFT)  &kp UP    &kp LC(RIGHT)  &kp LA(LS(UP))    &kp PG_UP
+&sk LCTRL  &kp LS(F11)  &kp F11    &kp F10     &kp LG(LC(D))           &kp LG(LC(F4))                                     &kp C_VOLUME_DOWN  &kp LEFT      &kp DOWN  &kp RIGHT      &kp LA(LS(DOWN))  &kp PG_DN
 &sk LSHFT  &kp LC(Z)    &kp LC(X)  &kp LC(C)   &mt LC(LG(LEFT)) LC(V)  &mt LC(LG(RIGHT)) LC(B)  &bt BT_PRV    &bt BT_NXT  &kp LC(LS(M))      &kp HOME      &m1       &kp END        &kp BACKSLASH     &sk RSHFT
                                    &to 1       &kp LGUI                &sk LALT                 &kp SPACE     &to 1       &kp DEL            &kp RG(TAB)   &to 0
             >;
