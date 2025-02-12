@@ -42,58 +42,31 @@
 
         Home {
             bindings = <
-&kp ESC    &kp N1  &kp N2  &kp N3  &kp N4    &kp N5                                                             &kp N6         &kp N7       &kp N8     &kp N9   &kp N0     &kp GRAVE
-&kp TAB    &kp Q   &kp W   &kp E   &kp R     &kp T                                                              &kp Y          &kp U        &kp I      &kp O    &kp P      &kp MINUS
-&sk LCTRL  &kp A   &kp S   &kp D   &kp F     &kp G                                                              &kp H          &kp J        &kp K      &kp L    &kp SEMI   &kp SQT
-&sk LSHFT  &kp Z   &kp X   &kp C   &kp V     &kp B     &mt LEFT_PARENTHESIS LBKT    &mt RIGHT_PARENTHESIS RBKT  &kp N          &kp M        &kp COMMA  &kp DOT  &kp SLASH  &sk RSHFT
-                           &to 2   &kp LGUI  &sk LALT  &lt 5 SPACE                  &kp ENTER                   &kp BACKSPACE  &kp RA(TAB)  &to 0
-            >;
-        };
-
-        Debugging {
-            // ------------------------------------------------------------------------------------------------------------
-            // | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |       |
-            // |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  F8   |  F9   |  F10 |  F11  |  F12  |
-            // |   `   |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |   ~   |
-            // |       |     |     |      |      |      |        |  |       |      |  _    |  +    |  {   |   }   |  "|"  |
-            //                     |      |      |      |        |  |       |      |       |       |
-
-            bindings = <
-&kp ESC     &none       &none    &none        &none           &none                           &none              &none        &none  &none  &none  &none
-&kp F4      &kp LS(F5)  &kp F5   &kp LA(F1)   &kp LS(LC(F5))  &kp F9                          &none              &none        &none  &none  &none  &none
-&kp LCTRL   &kp F10     &kp F11  &kp LS(F11)  &none           &none                           &none              &none        &none  &none  &none  &none
-&kp LSHIFT  &none       &none    &none        &none           &none     &none          &none  &none              &none        &none  &none  &none  &kp RSHFT
-                                 &to 3        &none           &kp LALT  &lt 5 SPACE    &to 1  &mt DEL BACKSPACE  &kp RA(TAB)  &to 0
+&kp ESC    &kp N1  &kp N2  &kp N3  &kp N4    &kp N5                                                             &kp N6         &kp N7           &kp N8     &kp N9   &kp N0     &kp GRAVE
+&kp TAB    &kp Q   &kp W   &kp E   &kp R     &kp T                                                              &kp Y          &kp U            &kp I      &kp O    &kp P      &kp MINUS
+&sk LCTRL  &kp A   &kp S   &kp D   &kp F     &kp G                                                              &kp H          &kp J            &kp K      &kp L    &kp SEMI   &kp SQT
+&sk LSHFT  &kp Z   &kp X   &kp C   &kp V     &kp B     &mt LEFT_PARENTHESIS LBKT    &mt RIGHT_PARENTHESIS RBKT  &kp N          &kp M            &kp COMMA  &kp DOT  &kp SLASH  &sk RSHFT
+                           &to 2   &kp LGUI  &sk LALT  &lt 3 SPACE                  &kp ENTER                   &kp BACKSPACE  &kp RC(RA(TAB))  &to 0
             >;
         };
 
         Numbers {
             bindings = <
-&kp ESC     &none     &none     &none      &none             &none                                                    &none              &none        &none   &none   &none          &none
-&none       &kp HOME  &kp UP    &kp END    &kp LS(LA(UP))    &none                                                    &none              &kp N7       &kp N8  &kp N9  &none          &none
-&sk LCTRL   &kp LEFT  &kp DOWN  &kp RIGHT  &kp LS(LA(DOWN))  &none                                                    &kp N0             &kp N4       &kp N5  &kp N6  &none          &none
-&sk LSHIFT  &none     &none     &none      &none             &none     &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &none              &kp N1       &kp N2  &kp N3  &kp BACKSLASH  &sk RSHIFT
-                                &to 4      &none             &sk RALT  &lt 5 SPACE             &to 1                  &mt DEL BACKSPACE  &kp RA(TAB)  &to 0
-            >;
-        };
-
-        Macros {
-            bindings = <
-&kp ESC     &none             &none         &none              &none           &none                           &none    &none         &none     &none          &none  &none
-&none       &kp LC(LG(LEFT))  &kp LG(UP)    &kp LC(LG(RIGHT))  &kp LC(LG(D))   &none                           &none    &kp LC(LEFT)  &kp UP    &kp LC(RIGHT)  &none  &none
-&sk LCTRL   &kp LG(LEFT)      &kp LG(DOWN)  &kp LG(RIGHT)      &kp LC(LG(F4))  &none                           &none    &kp LEFT      &kp DOWN  &kp RIGHT      &none  &none
-&sk LSHIFT  &none             &none         &kp LS(LA(DOWN))   &kp LS(LA(UP))  &none     &none          &none  &none    &kp LA(LEFT)  &none     &kp LA(RIGHT)  &none  &sk RSHIFT
-                                            &to 1              &none           &sk LALT  &lt 5 SPACE    &to 1  &kp DEL  &kp RA(TAB)   &to 0
+&kp ESC     &none         &none     &none          &none             &none                                                                                        &none              &none            &none   &none   &none          &kp EQUAL
+&kp TAB     &kp LC(LEFT)  &kp UP    &kp LC(RIGHT)  &kp LC(LS(LEFT))  &kp LC(LS(RIGHT))                                                                            &none              &kp N7           &kp N8  &kp N9  &none          &kp MINUS
+&sk LCTRL   &kp LEFT      &kp DOWN  &kp RIGHT      &kp LS(HOME)      &kp LS(END)                                                                                  &none              &kp N4           &kp N5  &kp N6  &kp SEMI       &kp SQT
+&sk LSHIFT  &kp HOME      &none     &kp END        &none             &none              &mt LEFT_PARENTHESIS LEFT_BRACKET    &mt RIGHT_PARENTHESIS RIGHT_BRACKET  &none              &kp N1           &kp N2  &kp N3  &kp BACKSLASH  &sk RSHIFT
+                                    &to 1          &kp LWIN          &sk RALT           &lt 3 SPACE                          &lt 1 N0                             &mt DEL BACKSPACE  &kp RC(RA(TAB))  &to 0
             >;
         };
 
         Layers {
             bindings = <
-&sys_reset  &m1    &none  &none  &none  &none                               &none              &none         &none     &none        &none          &kp EQUAL
-&kp CAPS    &none  &none  &none  &none  &none                               &kp C_VOLUME_UP    &kp HOME      &kp UP    &kp END      &kp PAGE_UP    &none
-&sk LCTRL   &to 2  &to 3  &to 4  &none  &none                               &kp C_VOLUME_DOWN  &kp LEFT      &kp DOWN  &kp RIGHT    &kp PAGE_DOWN  &none
-&sk LSHFT   &none  &none  &none  &none  &none     &bt BT_PRV    &bt BT_NXT  &kp LC(LS(M))      &kp LS(HOME)  &none     &kp LS(END)  &kp BACKSLASH  &sk RSHFT
-                          &to 1  &none  &sk LALT  &kp SPACE     &to 1       &kp DEL            &kp RA(TAB)   &to 0
+&kp ESC    &kp F1       &kp F2     &kp F3      &kp F4            &sys_reset                                   &kp F6             &kp F7        &kp F8    &kp F12        &none             &kp EQUAL
+&kp CAPS   &kp LS(F5)   &kp F5     &kp LA(F1)  &kp LC(LS(F5))    &kp F9                                       &kp C_VOLUME_UP    &kp LC(LEFT)  &kp UP    &kp LC(RIGHT)  &kp LS(LA(UP))    &kp PG_UP
+&sk LCTRL  &kp LS(F11)  &kp F11    &kp F10     &kp LG(LC(D))     &kp LG(LC(F4))                               &kp C_VOLUME_DOWN  &kp LEFT      &kp DOWN  &kp RIGHT      &kp LS(LA(DOWN))  &kp PG_DN
+&sk LSHFT  &kp LC(Z)    &kp LC(X)  &kp LC(C)   &kp LC(LG(LEFT))  &kp LC(LG(RIGHT))  &bt BT_PRV    &bt BT_NXT  &kp LC(LS(M))      &kp HOME      &m1       &kp END        &kp BACKSLASH     &sk RSHFT
+                                   &to 1       &kp LGUI          &sk LALT           &kp SPACE     &to 1       &kp DEL            &kp RG(TAB)   &to 0
             >;
         };
     };
