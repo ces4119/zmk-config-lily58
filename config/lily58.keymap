@@ -52,7 +52,7 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&kp ESC    &kp N1  &kp N2  &kp N3  &kp N4    &kp N5                                                             &kp N6         &kp N7           &kp N8     &kp N9    &kp N0    &kp GRAVE
+&kp ESC    &kp N1  &kp N2  &kp N3  &kp N4    &kp N5                                                             &kp N6         &kp N7           &kp N8     &kp N9    &kp N0    &mt EQUAL GRAVE
 &kp TAB    &kp Q   &kp W   &kp E   &kp R     &kp T                                                              &kp Y          &kp U            &kp I      &kp O     &kp P     &kp MINUS
 &kp LCTRL  &kp A   &kp S   &kp D   &kp F     &kp G                                                              &kp H          &kp J            &kp K      &kp L     &kp UP    &kp SQT
 &kp LSHFT  &kp Z   &kp X   &kp C   &kp V     &kp B     &mt LEFT_PARENTHESIS LBKT    &mt RIGHT_PARENTHESIS RBKT  &kp N          &kp M            &kp COMMA  &kp LEFT  &kp DOWN  &kp RIGHT
@@ -62,10 +62,10 @@
 
         Layers {
             bindings = <
-&kp ESC     &mt F2 F1  &mt F4 F3  &mt F6 F5  &mt F8 F7         &sys_reset                                   &mt F10 F9         &mt F12 F11                &mt F14 F13  &mt F16 F15                &mt F18 F17    &kp EQUAL
-&bt BT_CLR  &kp LC(Q)  &kp LC(W)  &kp LG(E)  &kp LC(R)         &kp LC(T)                                    &kp C_VOLUME_UP    &kp RC(LEFT)               &kp UP       &kp RC(RIGHT)              &kp PAGE_UP    &kp RA(RS(UP))
+&kp ESC     &mt F2 F1  &mt F4 F3  &mt F6 F5  &mt F8 F7         &bt BT_CLR                                   &mt F10 F9         &mt F12 F11                &mt F14 F13  &mt F16 F15                &mt F18 F17    &kp EQUAL
+&sys_reset  &kp LC(Q)  &kp LC(W)  &kp LG(E)  &kp LC(R)         &kp LC(T)                                    &kp C_VOLUME_UP    &kp RC(LEFT)               &kp UP       &kp RC(RIGHT)              &kp PAGE_UP    &kp RA(RS(UP))
 &sk LCTRL   &kp LC(A)  &kp LC(S)  &kp LC(D)  &kp LG(LC(D))     &kp LG(LC(F4))                               &kp C_VOLUME_DOWN  &mt HOME LEFT              &kp DOWN     &mt END RIGHT              &kp PAGE_DOWN  &kp RA(RS(DOWN))
-&sk LSHFT   &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(LG(LEFT))  &kp LC(LG(RIGHT))  &bt BT_PRV    &bt BT_NXT  &kp RS(RC(M))      &mt RS(HOME) RS(RC(LEFT))  &none        &mt RS(END) RS(RC(RIGHT))  &kp BACKSLASH  &sk CAPS
+&sk LSHFT   &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(LG(LEFT))  &kp LC(LG(RIGHT))  &bt BT_PRV    &bt BT_NXT  &kp RS(RC(M))      &mt RS(HOME) RS(RC(LEFT))  &m1          &mt RS(END) RS(RC(RIGHT))  &kp BACKSLASH  &sk CAPS
                                   &m1        &kp LGUI          &sk LALT           &none         &to 0       &kp DEL            &kp RG(TAB)                &to 2
             >;
         };
