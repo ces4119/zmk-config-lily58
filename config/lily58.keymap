@@ -25,11 +25,11 @@
 
         Home {
             bindings = <
-&kp ESC    &mt F1 N1  &mt F2 N2  &mt F3 N3  &mt F4 N4  &mt F5 N5                                                           &mt F6 N6          &mt F7 N7        &mt F8 N8  &mt F9 N9  &mt F10 N0           &mt EQUAL GRAVE
-&kp TAB    &kp Q      &kp W      &kp E      &kp R      &kp T                                                               &kp Y              &kp U            &kp I      &kp O      &kp P                &kp MINUS
-&sk LCTRL  &kp A      &kp S      &kp D      &kp F      &kp G                                                               &kp H              &kp J            &kp K      &kp L      &kp SEMI             &kp SQT
-&sk LSHFT  &kp Z      &kp X      &kp C      &kp V      &kp B      &mt LEFT_PARENTHESIS LBKT    &mt RIGHT_PARENTHESIS RBKT  &kp N              &kp M            &kp COMMA  &kp DOT    &mt BACKSLASH SLASH  &sk RSHFT
-                                 &to 1      &kp LGUI   &sk LALT   &lt 2 SPACE                  &lt 3 ENTER                 &mt DEL BACKSPACE  &kp RC(RA(TAB))  &to 1
+&kp ESC    &kp N1  &kp N2  &kp N3  &kp N4    &kp N5                                                             &kp N6             &kp N7           &kp N8     &kp N9   &kp N0               &mt EQUAL GRAVE
+&kp TAB    &kp Q   &kp W   &kp E   &kp R     &kp T                                                              &kp Y              &kp U            &kp I      &kp O    &kp P                &kp MINUS
+&sk LCTRL  &kp A   &kp S   &kp D   &kp F     &kp G                                                              &kp H              &kp J            &kp K      &kp L    &kp SEMI             &kp SQT
+&sk LSHFT  &kp Z   &kp X   &kp C   &kp V     &kp B     &mt LEFT_PARENTHESIS LBKT    &mt RIGHT_PARENTHESIS RBKT  &kp N              &kp M            &kp COMMA  &kp DOT  &mt BACKSLASH SLASH  &sk RSHFT
+                           &to 1   &kp LGUI  &sk LALT  &lt 3 SPACE                  &lt 4 ENTER                 &mt DEL BACKSPACE  &kp RC(RA(TAB))  &to 1
             >;
         };
 
@@ -42,21 +42,31 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&kp ESC    &trans  &trans  &trans  &trans    &trans                                                             &trans         &trans           &trans            &trans    &trans       &mt EQUAL GRAVE
-&kp TAB    &kp Q   &kp W   &kp E   &kp R     &kp T                                                              &kp Y          &kp U            &kp I             &kp O     &mt SLASH P  &kp MINUS
-&kp LCTRL  &kp A   &kp S   &kp D   &kp F     &kp G                                                              &kp H          &kp J            &kp K             &kp L     &kp UP       &mt SEMI SQT
-&kp LSHFT  &kp Z   &kp X   &kp C   &kp V     &kp B     &mt LEFT_PARENTHESIS LBKT    &mt RIGHT_PARENTHESIS RBKT  &kp N          &kp M            &mt PERIOD COMMA  &kp LEFT  &kp DOWN     &kp RIGHT
-                           &to 0   &kp LGUI  &kp LALT  &kp SPACE                    &kp ENTER                   &kp BACKSPACE  &kp RC(RA(TAB))  &to 0
+&trans     &trans  &trans  &trans  &trans  &trans                            &trans         &trans           &trans            &trans    &trans       &mt EQUAL GRAVE
+&trans     &trans  &trans  &trans  &trans  &trans                            &trans         &trans           &trans            &trans    &mt SLASH P  &trans
+&kp LCTRL  &trans  &trans  &trans  &trans  &trans                            &trans         &trans           &trans            &trans    &kp UP       &mt SEMI SQT
+&kp LSHFT  &trans  &trans  &trans  &trans  &trans    &trans       &trans     &trans         &trans           &mt PERIOD COMMA  &kp LEFT  &kp DOWN     &kp RIGHT
+                           &to 0   &mo 2   &kp LALT  &kp SPACE    &kp ENTER  &kp BACKSPACE  &kp RC(RA(TAB))  &to 0
+            >;
+        };
+
+        Directional_Fn {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &kp F7  &kp F8  &kp F9  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &kp F4  &kp F5  &kp F6  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp F1  &kp F2  &kp F3  &trans  &trans
+                        &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
             >;
         };
 
         DB_N_Nums {
             bindings = <
-&kp ESC     &mt F2 F1    &mt F4 F3  &mt F6 F5   &mt F8 F7          &sys_reset                                     &bt BT_CLR  &none            &none   &none   &none                &kp EQUAL
-&kp TAB     &kp LS(F5)   &kp F5     &kp LA(F1)  &kp LC(LS(F5))     &m1                                            &none       &kp N7           &kp N8  &kp N9  &none                &kp MINUS
-&sk LCTRL   &kp LS(F11)  &kp F11    &kp F10     &mt LG(LC(D)) F12  &mt LG(LC(F4)) F9                              &none       &kp N4           &kp N5  &kp N6  &kp SEMI             &kp SQT
-&sk LSHIFT  &kp F6       &kp F7     &kp F8      &kp LG(LC(LEFT))   &kp LG(LC(RIGHT))  &bt BT_PRV    &bt BT_NXT    &none       &kp N1           &kp N2  &kp N3  &mt BACKSLASH SLASH  &sk RSHIFT
-                                    &none       &kp LWIN           &sk RALT           &none         &mt ENTER N0  &kp DEL     &kp RC(RA(TAB))  &none
+&kp ESC     &mt F2 F1    &mt F4 F3  &mt F6 F5   &mt F8 F7          &sys_reset                                   &bt BT_CLR  &none            &none   &none   &none                &kp EQUAL
+&kp TAB     &kp LS(F5)   &kp F5     &kp LA(F1)  &kp LC(LS(F5))     &m1                                          &none       &kp N7           &kp N8  &kp N9  &none                &kp MINUS
+&sk LCTRL   &kp LS(F11)  &kp F11    &kp F10     &mt LG(LC(D)) F12  &mt LG(LC(F4)) F9                            &none       &kp N4           &kp N5  &kp N6  &kp SEMI             &kp SQT
+&sk LSHIFT  &kp F6       &kp F7     &kp F8      &kp LG(LC(LEFT))   &kp LG(LC(RIGHT))  &bt BT_PRV    &bt BT_NXT  &none       &kp N1           &kp N2  &kp N3  &mt BACKSLASH SLASH  &sk RSHIFT
+                                    &none       &none              &none              &none         &kp N0      &kp DEL     &kp RC(RA(TAB))  &none
             >;
         };
 
@@ -66,7 +76,7 @@
 &none       &kp LC(Q)  &kp LC(W)  &kp LC(E)  &kp LC(R)         &kp LC(T)                                    &kp C_VOLUME_UP    &kp RC(LEFT)               &kp UP       &kp RC(RIGHT)              &kp PAGE_UP    &kp RA(RS(UP))
 &none       &kp LC(A)  &kp LC(S)  &kp LC(D)  &kp LG(LC(D))     &kp LG(LC(F4))                               &kp C_VOLUME_DOWN  &mt HOME LEFT              &kp DOWN     &mt END RIGHT              &kp PAGE_DOWN  &kp RA(RS(DOWN))
 &sk LSHIFT  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(LG(LEFT))  &kp LC(LG(RIGHT))  &bt BT_PRV    &bt BT_NXT  &kp RS(RC(M))      &mt RS(HOME) RS(RC(LEFT))  &none        &mt RS(END) RS(RC(RIGHT))  &trans         &sk CAPS
-                                  &m1        &kp LGUI          &sk LALT           &none         &none       &kp DEL            &kp RG(TAB)                &none
+                                  &m1        &kp RG(TAB)       &sk LALT           &none         &none       &kp DEL            &none                      &none
             >;
         };
     };
